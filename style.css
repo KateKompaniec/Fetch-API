@@ -169,3 +169,17 @@ li:hover {
     position: absolute;
     color: red;
 }
+
+
+.done {
+    border-color: green;
+
+}
+
+.overdue .due_date {
+    color: red;
+}
+
+.done .due_date {
+    color: green;
+}
