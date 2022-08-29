@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="toDoList.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <main><div class="sidebar">
+        <img src="./img/logo.svg" alt="no img">
+        <div class="sidebar_logo">
+            <h3>Onboarding Tool</h3>
+            <h4>Software Planet Group</h4>
+        </div>
+    </div>
+    <section class="all_main_info">
+        <div class="current_tasks">
+            <h1>Поточні завдання</h1>
+            <h4>Загальна дошка в системі, що містить поточні завдання для всіх контракторів </h4>
+        </div>
+        <div class="list">
+            <div id="addTask">
+                <h2>Додати нову задачу</h2>
+                <div id="contacts"></div>
+                <form name="task">
+                    <input type="text" name="title" placeholder="Назва задачі">
+                    <input type="text" name="description" placeholder="Опис задачі">
+                    <input type="date" name="due_date">
+                    <button type="submit">Додати</button>
+                    <p class="err_empty_title">Обов'язкове поле для заповнення</p>
+                </form>
+            </div>
+            <div id="showOnlyUndode">
+                <input id="showAllTasks" type="checkbox" onclick="showAllTasks(event)" >
+                  <h4>Показати виконані задачі</h4>
+                </div>
+            <ul class="list_of_tasks">
+    
+            </ul>
+        </div>
+    </section></main>
+</body>
+
+</html>

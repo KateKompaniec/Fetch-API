@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background: rgba(247, 247, 250, 0.5);
+    border-radius: 52px;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: #262837;
+
+}
+
+main {
+    width: 100%;
+    
+}
+
+.sidebar {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 100%;
+    width: 252px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 2px #E6EDF7;
+}
+
+.sidebar h4,
+.current_tasks h4,
+li h3 {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.sidebar h4 {
+    color: #CECFEF;
+}
+
+.sidebar h3 {
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 4px;
+}
+
+.sidebar h3,
+.sidebar h4,
+.current_tasks h2 {
+    font-weight: 700;
+}
+
+.sidebar_logo {
+    padding-top: 20px;
+    padding-left: 64px;
+}
+
+.sidebar img {
+    position: absolute;
+    top: 22px;
+    left: 20px;
+}
+
+.current_tasks h1 {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+
+}
+
+.current_tasks p,
+li h3,
+li p {
+    font-weight: 400;
+}
+
+.all_main_info {
+    margin-left: 415px;
+    margin-top: 32px;
+}
+
+.list {
+    padding-top: 38px;
+}
+
+.task div {
+    padding-left: 20px;
+   
+}
+
+li {
+    background: #FFFFFF;
+    border: 1px solid #E8EFF6;
+    box-shadow: 2px 2px 2px #E6EDF7;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin-right: 392px;
+    position: relative;
+}
+
+li h3,
+li h4, #showOnlyUndode h4{
+    display: inline;
+}
+
+li h3 {
+
+    padding-left: 10px;
+}
+
+li h4 {
+    padding-left: 8px;
+}
+
+li p {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+li .due_date {
+    padding-bottom: 16px;
+    padding-top: 12px;
+}
+
+li .title {
+    padding-bottom: 8px;
+}
+
+li .description {
+    padding-left: 26px;
+    padding-bottom: 20px;
+
+}
+
+.scale {
+    display: block;
+    height: 4px;
+}
+
+li:hover {
+    background-color: beige;
+}
+
+#toDelete {
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+#toDelete:hover{
+    background-color: gray;
+    background-size: contain;
+}
+.done {
+    display: none;
+}
+ .show-done .done {
+    display: block;
+} 
+#showOnlyUndode, #addTask, #addTask h2{
+    padding-bottom: 20px;
+}
+.err_empty_title{
+    opacity: 0;
+    font-size: 10px;
+    font-style: italic;
+    position: absolute;
+    color: red;
+}
