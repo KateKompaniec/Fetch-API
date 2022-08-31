@@ -14,39 +14,62 @@
 </head>
 
 <body>
-    <main><div class="sidebar">
-        <img src="./img/logo.svg" alt="no img">
-        <div class="sidebar_logo">
-            <h3>Onboarding Tool</h3>
-            <h4>Software Planet Group</h4>
-        </div>
-    </div>
-    <section class="all_main_info">
-        <div class="current_tasks">
-            <h1>Поточні завдання</h1>
-            <h4>Загальна дошка в системі, що містить поточні завдання для всіх контракторів </h4>
-        </div>
-        <div class="list">
-            <div id="addTask">
-                <h2>Додати нову задачу</h2>
-                <div id="contacts"></div>
-                <form name="task">
-                    <input type="text" name="title" placeholder="Назва задачі">
-                    <input type="text" name="description" placeholder="Опис задачі">
-                    <input type="date" name="due_date">
-                    <button type="submit">Додати</button>
-                    <p class="err_empty_title">Обов'язкове поле для заповнення</p>
-                </form>
+    <main>
+        <div class="sidebar">
+            <img src="./img/logo.svg" alt="no img">
+            <div class="sidebar_logo">
+                <h3>Onboarding Tool</h3>
+                <h4>Software Planet Group</h4>
             </div>
-            <div id="showOnlyUndode">
-                <input id="showAllTasks" type="checkbox" onclick="showAllTasks(event)" >
-                  <h4>Показати виконані задачі</h4>
-                </div>
-            <ul class="list_of_tasks">
-    
-            </ul>
         </div>
-    </section></main>
+        <section class="all_main_info">
+            <div class="current_tasks">
+                <h1>Поточні завдання</h1>
+                <h4>Загальна дошка в системі, що містить поточні завдання для всіх контракторів </h4>
+            </div>
+            <div class="list">
+                <div id="addTask">
+                    <h2>Додати нову задачу</h2>
+                    <div id="contacts"></div>
+                    <form name="task">
+                        <input type="text" name="title" placeholder="Назва задачі">
+                        <input type="text" name="description" placeholder="Опис задачі">
+                        <input type="date" name="due_date">
+                        <button type="submit">Додати</button>
+                        <p class="err_empty_title">Обов'язкове поле для заповнення</p>
+                    </form>
+                </div>
+                <div id="showOnlyUndode">
+                    <input id="showAllTasks" type="checkbox" onclick="showAllTasks(event)">
+                    <h4>Показати виконані задачі</h4>
+                </div>
+                <ul class="list_of_tasks">
+
+                </ul>
+            </div>
+            <template id="taskTemplate">
+                <div class="task">
+                    <button id="toDelete" onclick="removeTask(event)">Delete</button>
+                    <span class="scale"></span>
+                    <div class="due_date">
+                        <svg  width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4998 2.33325H3.49984C2.21117 2.33325 1.1665 3.37792 1.1665 4.66659V10.4999C1.1665 11.7886 2.21117 12.8333 3.49984 12.8333H10.4998C11.7885 12.8333 12.8332 11.7886 12.8332 10.4999V4.66659C12.8332 3.37792 11.7885 2.33325 10.4998 2.33325Z" stroke="#878787" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.6665 1.16663V3.49996M9.33317 1.16663V3.49996M1.1665 5.83329H12.8332" stroke="#878787" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        <h3></h3>
+                    </div>
+                    <div class="title">
+                        <input type="checkbox" onclick="changeState(event)">
+                        <h4></h4>
+                    </div>
+                    <div class="description">
+                        <p></p>
+                    </div>
+                        </div>
+                </div>
+            </template>
+        </section>
+    </main>
 </body>
 
 </html>
